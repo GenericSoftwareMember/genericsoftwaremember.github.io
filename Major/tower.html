@@ -1,0 +1,64 @@
+<!--
+File: tower.html
+GUI Assignment: HW 1
+Name: Kevin Sree
+Date Created: 9/24/23
+Description: The page about the Tower Arcana.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Tower | Tarot Cards</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <base href="http://127.0.0.1:3000/">
+</head>
+<body>
+    <!-- Calls upon the sidebar from sidebar.html and properly displays it on the left side. -->
+    <div id="sidebarContainer"></div>
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebarContainer').innerHTML = data;
+            });
+    </script>
+
+    <div class="header">
+        <!--
+            Displays the tower card.
+            Image is taken from wikipedia page:
+            https://en.wikipedia.org/wiki/The_Tower_(tarot_card)
+        -->
+        <img src="/Images/Tower.jpg" alt="The Tower" class="tarotCard">
+
+        <h1>The Tower</h1>
+        
+        <p> The sixteen card, the Tower, is a peculiar one. The reason being is that its meaning, sudden 
+            upheaval, chaos, and revelation, are often negative. This means the Tower is likely the only card
+            that has little to no positive interpretations compared to the rest, and is seen as an omen to
+            get, even if upright. Due to this, some decks have actually removed the Tower entirely.
+        </p>
+        <br>
+
+        <h2>Upright</h2>
+        <p> When The Tower appears upright in a reading, it signifies a profound and unforeseen change 
+            or revelation that shakes the foundations of your life. This card represents the need to break 
+            free from old structures, beliefs, or situations that no longer serve your growth. While the 
+            experience may be unsettling, it is often necessary for personal transformation and rebuilding. 
+            The Tower encourages you to embrace change as an opportunity for growth and renewal.
+        </p>
+        <br>
+
+        <h2>Reversed</h2>
+        <p> In a reversed position, The Tower may indicate a resistance to change or a delayed crisis. You 
+            might be avoiding addressing necessary upheaval or clinging to unstable situations. This card 
+            advises you to confront issues head-on and not postpone the inevitable. Avoiding change may 
+            lead to a more catastrophic event later. Embrace the idea of dismantling what no longer serves 
+            you and rebuilding your life with a stronger foundation.
+        </p>
+    </div>
+</body>
+</html>

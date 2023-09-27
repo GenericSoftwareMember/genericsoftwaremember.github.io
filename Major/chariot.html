@@ -1,0 +1,64 @@
+<!--
+File: chariot.html
+GUI Assignment: HW 1
+Name: Kevin Sree
+Date Created: 9/24/23
+Description: The page about the Chariot Arcana.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Chariot | Tarot Cards</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <base href="http://127.0.0.1:3000/"> 
+</head>
+<body>
+    <!-- Calls upon the sidebar from sidebar.html and properly displays it on the left side. -->
+    <div id="sidebarContainer"></div>
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebarContainer').innerHTML = data;
+            });
+    </script>
+
+    <div class="header">
+        <!--
+            Displays the chariot card.
+            Image is taken from wikipedia page:
+            https://en.wikipedia.org/wiki/The_Chariot_(tarot_card)
+        -->
+        <img src="/Images/Chariot.jpg" alt="The Chariot" class="tarotCard">
+
+        <h1>The Chariot</h1>
+        
+        <p> The Chariot, the seventh card in the Major Arcana, represents determination, control, and triumph 
+            over challenges. Although the titular chariot is always present, the animals pulling it change between 
+            designs. It is sometimes shown as sphinxes, horses, or other animals, typically with a black-and-white 
+            motif. 
+        </p>
+        <br>
+
+        <h2>Upright</h2>
+        <p> When The Chariot appears upright in a reading, it signifies a period of victory, self-discipline, 
+            and control over conflicting forces. This card represents your ability to harness your inner 
+            strength and drive to overcome obstacles and achieve your goals. It encourages you to stay focused 
+            and determined, no matter the challenges you face. The Chariot suggests that you're on a path of 
+            accomplishment and personal growth, symbolizing a victorious journey ahead.
+        </p>
+        <br>
+
+        <h2>Reversed</h2>
+        <p> In a reversed position, The Chariot may indicate a lack of direction or inner turmoil. You might be 
+            feeling overwhelmed or struggling to control conflicting aspects of your life. This card encourages 
+            you to regain focus and address any inner conflicts before proceeding. It can also signify delays 
+            or setbacks in your journey. Take time to reevaluate your goals and regain control over your path, 
+            ensuring that you're aligned with your true desires and values.
+        </p>
+    </div>
+</body>
+</html>

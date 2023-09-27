@@ -1,0 +1,64 @@
+<!--
+File: hierophant.html
+GUI Assignment: HW 1
+Name: Kevin Sree
+Date Created: 9/24/23
+Description: The page about the Hierophant Arcana.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Hierophant | Tarot Cards</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <base href="http://127.0.0.1:3000/">
+</head>
+<body>
+    <!-- Calls upon the sidebar from sidebar.html and properly displays it on the left side. -->
+    <div id="sidebarContainer"></div>
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebarContainer').innerHTML = data;
+            });
+    </script>
+
+    <div class="header">
+         <!--
+            Displays the hierophant card.
+            Image is taken from wikipedia page:
+            https://en.wikipedia.org/wiki/The_Hierophant
+        -->
+        <img src="/Images/Hierophant.jpg" alt="The Hierophant" class="tarotCard">
+
+        <h1>The Hierophant</h1>
+        
+        <p> The Hierophant, the fifth card in the Major Arcana, symbolizes tradition, spirituality, and 
+            guidance. The card actually has numerous different names depending on the set. It is sometimes 
+            called the Pope or the High Priest.
+        </p>
+        <br>
+
+        <h2>Upright</h2>
+        <p> When The Hierophant appears upright in a reading, it signifies a time of seeking guidance from 
+            established traditions or spiritual sources. It represents a need for structure, faith, and 
+            conformity to societal norms. This card encourages you to turn to mentors, teachers, or 
+            spiritual advisors for wisdom and support. It suggests a commitment to a spiritual or moral 
+            path and can indicate important ceremonies or rites.
+        </p>
+        <br>
+
+        <h2>Reversed</h2>
+        <p> In a reversed position, The Hierophant may suggest a resistance to tradition or a desire to break 
+            free from societal or religious norms. You might be questioning established beliefs and seeking a 
+            more individualistic path. This card encourages you to explore your spirituality and ethics 
+            independently, but also warns against rebelling without thoughtful consideration. It could also 
+            indicate a need to find unconventional sources of guidance or a period of uncertainty regarding 
+            your beliefs.
+        </p>
+    </div>
+</body>
+</html>

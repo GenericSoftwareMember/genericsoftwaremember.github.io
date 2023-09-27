@@ -1,0 +1,66 @@
+<!--
+File: devil.html
+GUI Assignment: HW 1
+Name: Kevin Sree
+Date Created: 9/24/23
+Description: The page about the Devil Arcana.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Devil | Tarot Cards</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <base href="http://127.0.0.1:3000/">
+</head>
+<body>
+    <!-- Calls upon the sidebar from sidebar.html and properly displays it on the left side. -->
+    <div id="sidebarContainer"></div>
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebarContainer').innerHTML = data;
+            });
+    </script>
+
+    <div class="header">
+        <!--
+            Displays the devil card.
+            Image is taken from wikipedia page:
+            https://en.wikipedia.org/wiki/The_Devil_(tarot_card)
+        -->
+        <img src="/Images/Devil.jpg" alt="The Devil" class="tarotCard">
+
+        <h1>The Devil</h1>
+        
+        <p> The Devil, the fifteenth card in the Major Arcana, represents temptation, bondage, and 
+            materialism. It often depicts a horned figure with chains around the necks of a man and 
+            woman, symbolizing their entrapment by their desires. The devil in question, at least in 
+            the Rider-Waite deck used for all of these cards, is Baphomet, a demon supposedly worshipped 
+            by the Knight Templars during the Crusades. The evidence that the Christian knights did such a
+            thing are minimal and mostly came around centuries after.
+        </p>
+        <br>
+
+        <h2>Upright</h2>
+        <p> When The Devil appears upright in a reading, it signifies a sense of entrapment, materialism, 
+            or unhealthy attachments. This card warns against succumbing to temptation and becoming enslaved 
+            by worldly desires. It encourages you to examine your life and identify areas where you may 
+            be giving in to unhealthy habits or negative influences. Breaking free from these chains requires 
+            self-awareness and the courage to face your inner demons.
+        </p>
+        <br>
+
+        <h2>Reversed</h2>
+        <p> In a reversed position, The Devil may indicate a release from bondage or a break free from 
+            unhealthy attachments. You might be overcoming temptations or letting go of negative influences. 
+            This card signifies liberation from oppressive situations and encourages you to regain control 
+            over your life. It can also represent a period of self-discovery and healing as you free yourself 
+            from what once held you back.
+        </p>
+    </div>
+</body>
+</html>

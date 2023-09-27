@@ -1,0 +1,62 @@
+<!--
+File: death.html
+GUI Assignment: HW 1
+Name: Kevin Sree
+Date Created: 9/24/23
+Description: The page about the Death Arcana.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Death | Tarot Cards</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <base href="http://127.0.0.1:3000/">
+</head>
+<body>
+    <!-- Calls upon the sidebar from sidebar.html and properly displays it on the left side. -->
+    <div id="sidebarContainer"></div>
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebarContainer').innerHTML = data;
+            });
+    </script>
+
+    <div class="header">
+        <!--
+            Displays the death card.
+            Image is taken from wikipedia page:
+            https://en.wikipedia.org/wiki/Death_(tarot_card)
+        -->
+        <img src="/Images/Death.jpg" alt="The Death" class="tarotCard">
+
+        <h1>The Death</h1>
+        
+        <p> Contrary to what one would assume from its name, Death in tarot is not actually a purely negative
+            card. The thirteenth card is associated with major upheavals, transformation, renewal, and well, death.
+        </p>
+        <br>
+
+        <h2>Upright</h2>
+        <p> When Death appears upright in a reading, it signifies a profound transformation or change that 
+            is inevitable and necessary for growth. This card represents the end of one phase of life, 
+            making way for a new and improved one. It encourages you to embrace the process of letting go, 
+            shedding old beliefs, and releasing attachments. While it can be unsettling, Death heralds a 
+            positive transformation, much like the changing seasons.
+        </p>
+        <br>
+
+        <h2>Reversed</h2>
+        <p> In a reversed position, Death may indicate resistance to change or a fear of letting go. You might 
+            be holding onto the past or avoiding necessary endings. This card urges you to confront these 
+            fears and embrace change willingly. It can also suggest a stagnant situation that requires a 
+            shake-up to move forward. Avoiding change may lead to stagnation, so be open to the 
+            transformational process.
+        </p>
+    </div>
+</body>
+</html>

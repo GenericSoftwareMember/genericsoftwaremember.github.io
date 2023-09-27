@@ -1,0 +1,62 @@
+<!--
+File: emperor.html
+GUI Assignment: HW 1
+Name: Kevin Sree
+Date Created: 9/24/23
+Description: The page about the Emperor Arcana.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Emperor | Tarot Cards</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <base href="http://127.0.0.1:3000/">
+</head>
+<body>
+    <!-- Calls upon the sidebar from sidebar.html and properly displays it on the left side. -->
+    <div id="sidebarContainer"></div>
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebarContainer').innerHTML = data;
+            });
+    </script>
+
+    <div class="header">
+        <!--
+            Displays the emperor card.
+            Image is taken from wikipedia page:
+            https://en.wikipedia.org/wiki/The_Emperor_(tarot_card)
+        -->
+        <img src="/Images/Emperor.jpg" alt="The Emperor" class="tarotCard">
+
+        <h1>The Emperor</h1>
+
+        <p> The counterpart to the previous Empress, the Emperor is the father to the Empress's mother.
+            The Emperor represents authority, leadership, and structure. It is also associated with the 
+            planet Mars, due to the connection between masculinity and Mars, similar to femininity and Venus.
+        </p>
+        <br>
+
+        <h2>Upright</h2>
+        <p> When The Emperor appears upright in a reading, it suggests a need for structure, order, and leadership 
+            in your life. This card represents authority and guidance. It's a time to take control of 
+            situations, make decisions with confidence, and establish a firm foundation for your goals. 
+            The Emperor encourages you to embrace your leadership qualities and set clear boundaries.
+        </p>
+        <br>
+
+        <h2>Reversed</h2>
+        <p> In a reversed position, The Emperor can signify an abuse of power, rigidity, or a lack of 
+            effective leadership. You might be facing challenges in maintaining control or experiencing a power 
+            struggle. This card encourages you to reevaluate your approach, as excessive control can lead to 
+            conflict. It may also advise you to be more open to collaboration and flexible in your decision-making. 
+            Balance your authority with empathy and adaptability to resolve conflicts and maintain order.
+        </p>
+    </div>
+</body>
+</html>

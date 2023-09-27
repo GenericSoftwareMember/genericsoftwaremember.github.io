@@ -1,0 +1,62 @@
+<!--
+File: magician.html
+GUI Assignment: HW 1
+Name: Kevin Sree
+Date Created: 9/24/23
+Description: The page about the Magician Arcana.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Magician | Tarot Cards</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <base href="http://127.0.0.1:3000/">
+</head>
+<body>
+    <!-- Calls upon the sidebar from sidebar.html and properly displays it on the left side. -->
+    <div id="sidebarContainer"></div>
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebarContainer').innerHTML = data;
+            });
+    </script>
+
+    <div class="header">
+        <!--
+            Displays the hermit card.
+            Image is taken from wikipedia page:
+            https://en.wikipedia.org/wiki/The_Magician_(tarot_card)
+        -->
+        <img src="/Images/Magician.jpg" alt="The Magician" class="tarotCard">
+
+        <h1>The Magician</h1>
+
+        <p> The Magician is the first card to appear in the numbered order, it symbolizing mastery, power, 
+            and the meeting of the physical and spiritual worlds. Since the Fool can be either at the beginning
+            or end of the deck, the Magician usually acts as the first step in the Fool's Journey. 
+        </p>
+        <br>
+
+        <h2>Upright</h2>
+        <p> When The Magician appears upright in a reading, it signifies that you have the skills, tools, and 
+            potential to manifest your desires. It's a time of empowerment and transformation, where your ideas 
+            can become reality through focused intent and action. Use your talents wisely and trust in your 
+            abilities to create positive change in your life.
+        </p>
+        <br>
+
+        <h2>Reversed</h2>
+        <p> In a reversed position, The Magician can suggest a lack of focus or misuse of one's talents. It may 
+            indicate manipulation, trickery, or the abuse of power. Be cautious of deceptive influences, and 
+            assess whether you are using your abilities to benefit yourself and others or for self-serving purposes. 
+            This card calls for self-reflection and realignment of your intentions to manifest positive outcomes.
+        </p>
+
+    </div>
+</body>
+</html>

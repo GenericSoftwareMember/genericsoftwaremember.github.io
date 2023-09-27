@@ -1,0 +1,63 @@
+<!--
+File: hermit.html
+GUI Assignment: HW 1
+Name: Kevin Sree
+Date Created: 9/24/23
+Description: The page about the Hermit Arcana.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Hermit | Tarot Cards</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <base href="http://127.0.0.1:3000/">
+</head>
+<body>
+    <!-- Calls upon the sidebar from sidebar.html and properly displays it on the left side. -->
+    <div id="sidebarContainer"></div>
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebarContainer').innerHTML = data;
+            });
+    </script>
+
+    <div class="header">
+        <!--
+            Displays the hermit card.
+            Image is taken from wikipedia page:
+            https://en.wikipedia.org/wiki/The_Hermit_(tarot_card)
+        -->
+        <img src="/Images/Hermit.jpg" alt="The Hermit" class="tarotCard">
+
+        <h1>The Hermit</h1>
+        
+        <p> The Hermit, the ninth card in the Major Arcana, represents introspection, solitude, and inner 
+            guidance. It often features a cloaked figure holding a lantern, symbolizing the search for 
+            inner wisdom.
+        </p>
+        <br>
+
+        <h2>Upright</h2>
+        <p> When The Hermit appears upright in a reading, it signifies a period of introspection, solitude, 
+            and inner searching. This card represents a time for self-reflection, seeking answers within, and 
+            connecting with your inner wisdom. The Hermit encourages you to withdraw from external distractions 
+            and noise to find clarity, understanding, and enlightenment. It's a reminder that answers to your 
+            questions can be found within, and this introspective journey can lead to profound insights.
+        </p>
+        <br>
+
+        <h2>Reversed</h2>
+        <p> In a reversed position, The Hermit may indicate a reluctance to seek solitude or a fear of introspection. 
+            You might be avoiding self-reflection or resisting the need for inner guidance. This card encourages 
+            you to embrace moments of solitude and self-discovery. It may also suggest that you are seeking answers 
+            outside of yourself rather than looking within. Reconnect with your inner wisdom, and trust in your ability 
+            to find the answers you seek.
+        </p>
+    </div>
+</body>
+</html>

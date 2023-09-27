@@ -1,0 +1,63 @@
+<!--
+File: temperance.html
+GUI Assignment: HW 1
+Name: Kevin Sree
+Date Created: 9/24/23
+Description: The page about the Temperance Arcana.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Temperance | Tarot Cards</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <base href="http://127.0.0.1:3000/">
+</head>
+<body>
+    <!-- Calls upon the sidebar from sidebar.html and properly displays it on the left side. -->
+    <div id="sidebarContainer"></div>
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebarContainer').innerHTML = data;
+            });
+    </script>
+
+    <div class="header">
+        <!--
+            Displays the temperance card.
+            Image is taken from wikipedia page:
+            https://en.wikipedia.org/wiki/Temperance_(tarot_card)
+        -->
+        <img src="/Images/Temperance.jpg" alt="The Temperance" class="tarotCard">
+
+        <h1>The Temperance</h1>
+        
+        <p> Temperance, the fourteenth card in the Major Arcana, embodies balance, harmony, and moderation. 
+            It often features an angelic figure pouring liquid between two cups, symbolizing the 
+            blending of opposites.
+        </p>
+        <br>
+
+        <h2>Upright</h2>
+        <p> When Temperance appears upright in a reading, it signifies a need for balance, patience, and 
+            moderation in your life. This card represents harmony and the ability to blend conflicting 
+            elements. It encourages you to find middle ground and approach situations with a calm and balanced 
+            demeanor. Temperance suggests that by avoiding extremes and embracing compromise, you can 
+            achieve inner and outer harmony.
+        </p>
+        <br>
+
+        <h2>Reversed</h2>
+        <p> In a reversed position, Temperance may indicate a lack of balance, impatience, or excessive behavior. 
+            You might be struggling to find equilibrium in your life or be prone to impulsiveness. This card 
+            encourages you to reevaluate your actions and find ways to bring balance back into your life. 
+            It may also warn against overindulgence or hasty decisions. Take time to reflect and restore 
+            equilibrium in your thoughts, emotions, and actions.
+        </p>
+    </div>
+</body>
+</html>

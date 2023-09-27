@@ -1,0 +1,63 @@
+<!--
+File: priestess.html
+GUI Assignment: HW 1
+Name: Kevin Sree
+Date Created: 9/24/23
+Description: The page about the Priestess Arcana.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Priestess | Tarot Cards</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <base href="http://127.0.0.1:3000/">
+</head>
+<body>
+    <!-- Calls upon the sidebar from sidebar.html and properly displays it on the left side. -->
+    <div id="sidebarContainer"></div>
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebarContainer').innerHTML = data;
+            });
+    </script>
+
+    <div class="header">
+        <!--
+            Displays the priestess card.
+            Image is taken from wikipedia page:
+            https://en.wikipedia.org/wiki/The_High_Priestess
+        -->
+        <img src="/Images/Priestess.jpg" alt="The Priestess" class="tarotCard">
+
+        <h1>The Priestess</h1>
+
+        <p> Also known as the High Priestess, the Priestess is the second card that appears in the Tarot deck.
+            She embodies mystery, intuition, and the subconscious. It has a great focus on believing in the
+            inner wisdom within people.
+        </p>
+        <br>
+
+        <h2>Upright</h2>
+        <p> When The High Priestess appears upright in a reading, it indicates a time of deep intuition and 
+            heightened awareness. Trust your instincts and tap into your inner wisdom. Secrets and mysteries may 
+            be revealed, and you are encouraged to explore your subconscious. This card suggests a need for 
+            patience and introspection before taking action. Listen to your inner voice and pay attention to dreams 
+            and intuitive insights.
+        </p>
+        <br>
+
+        <h2>Reversed</h2>
+        <p> In a reversed position, The High Priestess can signal a lack of intuition or a reluctance to acknowledge 
+            your inner wisdom. You might be ignoring important insights or resisting your intuitive side. It could 
+            also point to hidden agendas or unresolved mysteries. This card urges you to reconnect with your intuition, 
+            explore your subconscious, and be open to the unknown. Avoid ignoring your inner guidance, as it may 
+            hold the key to understanding your current situation.
+        </p>
+    </div>
+</body>
+</html>

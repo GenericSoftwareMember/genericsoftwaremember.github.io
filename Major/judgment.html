@@ -1,0 +1,65 @@
+<!--
+File: judgment.html
+GUI Assignment: HW 1
+Name: Kevin Sree
+Date Created: 9/24/23
+Description: The page about the Judgment Arcana.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Judgment | Tarot Cards</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <base href="http://127.0.0.1:3000/">
+</head>
+<body>
+    <!-- Calls upon the sidebar from sidebar.html and properly displays it on the left side. -->
+    <div id="sidebarContainer"></div>
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebarContainer').innerHTML = data;
+            });
+    </script>
+
+    <div class="header">
+        <!--
+            Displays the judgment card.
+            Image is taken from wikipedia page:
+            https://en.wikipedia.org/wiki/Judgement_(tarot_card)
+        -->
+        <img src="/Images/Judgment.jpg" alt="The Judgment" class="tarotCard">
+
+        <h1>The Judgment</h1>
+        
+        <p> Judgment, the twentieth card in the Major Arcana, represents rebirth, self-reflection, 
+            and spiritual awakening. It often features figures rising from coffins, symbolizing a 
+            call to a higher purpose. In the Thoth deck, it is replaced by the Aeon.
+        </p>
+        <br>
+
+        <h2>Upright</h2>
+        <p> When Judgment appears upright in a reading, it signifies a period of self-reflection, 
+            renewal, and transformation. This card represents a call to awaken to your true self and 
+            embrace a higher purpose. It encourages you to let go of past mistakes, judgments, and 
+            regrets and to make amends or seek forgiveness if necessary. Judgment marks a moment of 
+            personal growth and a fresh start. It's a reminder to listen to your inner calling and 
+            live in alignment with your values and beliefs.
+        </p>
+        <br>
+
+        <h2>Reversed</h2>
+        <p> In a reversed position, Judgment may indicate a reluctance to change, a fear of judgment, 
+            or resistance to self-reflection. You might be avoiding facing the consequences of your 
+            actions or neglecting your inner calling. This card encourages you to confront your past and 
+            make necessary changes for personal growth. It may also warn against procrastination or 
+            avoiding important decisions. Embrace the opportunity for transformation and self-awareness 
+            that Judgment offers, even if it feels uncomfortable.
+        </p>
+    </div>
+</body>
+</html>

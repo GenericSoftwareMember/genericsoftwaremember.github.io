@@ -1,0 +1,64 @@
+<!--
+File: fool.html
+GUI Assignment: HW 1
+Name: Kevin Sree
+Date Created: 9/24/23
+Description: The page about the Fool Arcana.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Fool | Tarot Cards</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <base href="http://127.0.0.1:3000/">
+</head>
+<body>
+    <!-- Calls upon the sidebar from sidebar.html and properly displays it on the left side. -->
+    <div id="sidebarContainer"></div>
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebarContainer').innerHTML = data;
+            });
+    </script>
+
+    <div class="header">
+        <!--
+            Displays the fool card.
+            Image is taken from wikipedia page:
+            https://en.wikipedia.org/wiki/The_Fool_(tarot_card)
+        -->
+        <img src="/Images/Fool.jpg" alt="The Fool" class="tarotCard">
+
+        <h1>The Fool</h1>
+
+        <p> The Fool is probably the most unique card within all the Major Arcana. It is either unnumbered
+            or given 0 or XXII, meaning it can be pleased as first or last within the Fool's Journey. The 
+            fool in question is often thought to be a beggar, or someone of low social and economic standing.
+        </p>
+        <br>
+
+        <h2>Upright</h2>
+        <p> The Fool in an upright position represents new beginnings, spontaneity, and embracing the unknown. 
+            It signifies a willingness to take risks, trust your instincts, and embark on a new journey with 
+            an open heart. This card encourages you to let go of the past and embrace uncertainty as you step 
+            into uncharted territory. It's a reminder that sometimes, we must take a leap of faith to discover 
+            our true path.
+        </p>
+        <br>
+
+        <h2>Reversed</h2>
+        <p> When The Fool appears in a reversed position, it may indicate recklessness, impulsivity, or a 
+            reluctance to embrace change. You might be hesitating to take necessary risks or are holding onto 
+            past fears and inhibitions. It's a warning to balance your sense of adventure with practicality and 
+            caution, as impulsive decisions may lead to regret. Use this moment of reflection to reassess your 
+            goals and approach new opportunities with a bit more thoughtfulness.
+        </p>
+
+    </div>
+</body>
+</html>

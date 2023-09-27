@@ -1,0 +1,64 @@
+<!--
+File: fortune.html
+GUI Assignment: HW 1
+Name: Kevin Sree
+Date Created: 9/24/23
+Description: The page about the Fortune Arcana.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Fortune | Tarot Cards</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <base href="http://127.0.0.1:3000/">
+</head>
+<body>
+    <!-- Calls upon the sidebar from sidebar.html and properly displays it on the left side. -->
+    <div id="sidebarContainer"></div>
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebarContainer').innerHTML = data;
+            });
+    </script>
+
+    <div class="header">
+        <!--
+            Displays the fortune card.
+            Image is taken from wikipedia page:
+            https://en.wikipedia.org/wiki/Wheel_of_Fortune_(tarot_card)
+        -->
+        <img src="/Images/Fortune.jpg" alt="The Fortune" class="tarotCard">
+
+        <h1>The Fortune</h1>
+        
+        <p> The Fortune, its full name actually being the Wheel of Fortune, symbolizes cycles, destiny, and 
+            change. It often features a large wheel with different creatures or figures representing the 
+            ever-turning wheel of fate. Notably, on this design of the Rider-Waite deck, it actually has one 
+            of the names associated with the Biblical God spelled out in Hebrew, YHWH.
+        </p>
+        <br>
+
+        <h2>Upright</h2>
+        <p> When The Wheel of Fortune appears upright in a reading, it signifies a positive turn of events, 
+            luck, and the cyclical nature of life. This card represents a period of change, often for the 
+            better. It encourages you to embrace the ups and downs of life, knowing that everything moves 
+            in cycles. This is a reminder that good fortune and opportunities can unexpectedly come your 
+            way. Be open to change and go with the flow, as the wheel of life continues to turn.
+        </p>
+        <br>
+
+        <h2>Reversed</h2>
+        <p> In a reversed position, The Wheel of Fortune may indicate a temporary setback, delays, or missed 
+            opportunities. You might feel like you're stuck in a negative cycle or facing obstacles. This card 
+            encourages you to exercise caution, especially in financial matters, and prepare for potential 
+            challenges. It also reminds you that, even in difficult times, the wheel will eventually turn in 
+            your favor. Focus on maintaining a positive outlook and adapt to changes as they come.
+        </p>
+    </div>
+</body>
+</html>

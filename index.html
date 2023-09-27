@@ -1,0 +1,305 @@
+<!--
+File: index.html
+GUI Assignment: HW 1
+Name: Kevin Sree
+Date Created: 9/24/23
+Description: This is a website that contains basic information about Tarot Cards, it uses a sidebar to
+             navigate through the twenty-two different Major Arcana.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Tarot Cards</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" 
+    rel="stylesheet">
+</head>
+
+<body>
+    <!-- Calls upon the sidebar from sidebar.html and properly displays it on the left side. -->
+     <div id="sidebarContainer"></div>
+     <script>
+         fetch('sidebar.html')
+             .then(response => response.text())
+             .then(data => {
+                 document.getElementById('sidebarContainer').innerHTML = data;
+             });
+     </script>
+
+     <!-- Displays the banner image at the top of the website, uses styles.css. Banner is drawn by me. -->
+     <img src="/Images/Banner.png" alt="Tarot Cards Banner" class="tarotBanner">
+    
+    <div class="header">
+
+        <!-- Introductory paragraph-->
+        <h1>Tarot Cards</h1>
+        <p> I believe that for a majority of people, we've all had that phase in our lives where we
+            fall into a strange sort of rabbit hole, some sort of obsession into a particular subject
+            matter where it sort of takes over our lives for some time. I've had friends where it were
+            things like Greek mythology, rocks, or serial killers, strangely enough. For me, my little 
+            rabbit hole was the occult. Now, I didn't <i>believe</i> in the occult, as much fun as it were
+            to trust in the stars to predict my future, it wasn't exactly something I could put my faith 
+            into. I was more intrigued by the concept, that others out there thought that holding a pink 
+            rock was enough to ward away diseases or the like. In particular, what I now know <i>way</i> too
+            much about are things known as Tarot Cards.
+        </p>
+        <br>
+        
+        <!-- Basic information -->
+        <h2>What are Tarot Cards?</h2>
+        <p> Tarot cards are a deck of seventy-eight cards that were created around the 1400s. Originally, they
+            were just normal playing cards for regular card games before they were believed to have further
+            meaning and began to be used in cartomancy, or fortune&#8209telling and divination using cards. When
+            used for this purpose, they are referred to as "Arcana", and are separated into two different
+            categories: Major or Minor.
+        </p>
+        <br>
+        
+        <!-- Subheadings about Major and Minor Arcana-->
+        <h3>Major</h3>
+        <p> The Major Arcana are comprised of twenty&#8209two different cards, with each one possessing a
+            different meaning. When it comes to tarot card reading, it follows a principle known as the 
+            "Fool's&nbspJourney", in which the cards have a chronological order and represent the path 
+            people travel down in life. They use Roman numerals and number I to XXI, with the titular Fool
+            being either unnumbered or treated as 0 or XXII. The naming of each Arcana and the number associated
+            with each one may differ slightly between decks, but listed below are one of the more common
+            modern interpretations that are typically used in divinations.
+        </p>
+        <br>
+
+        <!-- Table displaying all 22 Major Arcana with links to pages about each. -->
+        <table>
+            <tr>
+                <th>Number</th>
+                <th>Arcana</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td><a href="Major\fool.html">The Fool</a></td>
+              </tr>
+              <tr>
+                <td>I</td>
+                <td><a href="Major\magician.html">The Magician</a></td>
+              </tr>
+              <tr>
+                <td>II</td>
+                <td><a href="Major\priestess.html">The Priestess</a></td>
+              </tr>
+              <tr>
+                <td>III</td>
+                <td><a href="Major\empress.html">The Empress</a></td>
+              </tr>
+              <tr>
+                <td>IV</td>
+                <td><a href="Major\emperor.html">The Emperor</a></td>
+              </tr>
+              <tr>
+                <td>V</td>
+                <td><a href="Major\hierophant.html">The Hierophant</a></td>
+              </tr>
+              <tr>
+                <td>VI</td>
+                <td><a href="Major\lovers.html">The Lovers</a></td>
+              </tr>
+              <tr>
+                <td>VII</td>
+                <td><a href="Major\chariot.html">The Chariot</a></td>
+              </tr>
+              <tr>
+                <td>VIII</td>
+                <td><a href="Major\justice.html">Justice</a></td>
+              </tr>
+              <tr>
+                <td>IX</td>
+                <td><a href="Major\hermit.html">The Hermit</a></td>
+              </tr>
+              <tr>
+                <td>X</td>
+                <td><a href="Major\fortune.html">Fortune</a></td>
+              </tr>
+              <tr>
+                <td>XI</td>
+                <td><a href="Major\strength.html">Strength</a></td>
+              </tr>
+              <tr>
+                <td>XII</td>
+                <td><a href="Major\hanged-man.html">The Hanged Man</a></td>
+              </tr>
+              <tr>
+                <td>XIII</td>
+                <td><a href="Major\death.html">Death</a></td>
+              </tr>
+              <tr>
+                <td>XIV</td>
+                <td><a href="Major\temperance.html">Temperance</a></td>
+              </tr>
+              <tr>
+                <td>XV</td>
+                <td><a href="Major\devil.html">The Devil</a></td>
+              </tr>
+              <tr>
+                <td>XVI</td>
+                <td><a href="Major\tower.html">The Tower</a></td>
+              </tr>
+              <tr>
+                <td>XVII</td>
+                <td><a href="Major\star.html">The Star</a></td>
+              </tr>
+              <tr>
+                <td>XVIII</td>
+                <td><a href="Major\moon.html">The Moon</a></td>
+              </tr>
+              <tr>
+                <td>XIX</td>
+                <td><a href="Major\sun.html">The Sun</a></td>
+              </tr>
+              <tr>
+                <td>XX</td>
+                <td><a href="Major\judgment.html">Judgment</a></td>
+              </tr>
+              <tr>
+                <td>XXI</td>
+                <td><a href="Major\world.html">The World</a></td>
+              </tr>
+        </table>
+        <br>
+
+        <h3>Minor</h3>
+        <p> The Minor Arcana are comprised of the remaining fifty-six cards, separated into four
+            suits. There are fourteen cards in each suit, with ten numbered cards going from 1-10
+            and the last remaining four court cards being a king, queen, knight, and jack. The four suits
+            were originally the batons, coins, cups, and swords, but their names have been altered in
+            the modern day. Nowadays, the batons suit is usually substituted with the wands or staves,
+            the coins is often renamed to the pentacles, and the cups can also be called goblets. 
+        </p>
+        <br>
+
+        <!-- Table displaying all 56 Minor Arcana separated into their four suits. -->
+        <table>
+            <tr>
+                <th>Number</th>
+                <th>Wands</th>
+                <th>Cups</th>
+                <th>Swords</th>
+                <th>Pentacles</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Ace of Wands</td>
+                <td>Ace of Cups</td>
+                <td>Ace of Swords</td>
+                <td>Ace of Pentacles</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Two of Wands</td>
+                <td>Two of Cups</td>
+                <td>Two of Swords</td>
+                <td>Two of Pentacles</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Three of Wands</td>
+                <td>Three of Cups</td>
+                <td>Three of Swords</td>
+                <td>Three of Pentacles</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Four of Wands</td>
+                <td>Four of Cups</td>
+                <td>Four of Swords</td>
+                <td>Four of Pentacles</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Five of Wands</td>
+                <td>Five of Cups</td>
+                <td>Five of Swords</td>
+                <td>Five of Pentacles</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Six of Wands</td>
+                <td>Six of Cups</td>
+                <td>Six of Swords</td>
+                <td>Six of Pentacles</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Seven of Wands</td>
+                <td>Seven of Cups</td>
+                <td>Seven of Swords</td>
+                <td>Seven of Pentacles</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Eight of Wands</td>
+                <td>Eight of Cups</td>
+                <td>Eight of Swords</td>
+                <td>Eight of Pentacles</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Nine of Wands</td>
+                <td>Nine of Cups</td>
+                <td>Nine of Swords</td>
+                <td>Nine of Pentacles</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Ten of Wands</td>
+                <td>Ten of Cups</td>
+                <td>Ten of Swords</td>
+                <td>Ten of Pentacles</td>
+              </tr>
+              <tr>
+                <td>Page</td>
+                <td>Page of Wands</td>
+                <td>Page of Cups</td>
+                <td>Page of Swords</td>
+                <td>Page of Pentacles</td>
+              </tr>
+              <tr>
+                <td>Knight</td>
+                <td>Knight of Wands</td>
+                <td>Knight of Cups</td>
+                <td>Knight of Swords</td>
+                <td>Knight of Pentacles</td>
+              </tr>
+              <tr>
+                <td>Queen</td>
+                <td>Queen of Wands</td>
+                <td>Queen of Cups</td>
+                <td>Queen of Swords</td>
+                <td>Queen of Pentacles</td>
+              </tr>
+              <tr>
+                <td>King</td>
+                <td>King of Wands</td>
+                <td>King of Cups</td>
+                <td>King of Swords</td>
+                <td>King of Pentacles</td>
+              </tr>
+            </table>
+        <br>
+
+        <!-- Final paragraph about the concept of Upright and Reversed meanings-->
+        <h2>Upright and Reversed</h2>
+        <p> Depending on how the card is drawn from a tarot deck, the meaning of the card can change. If
+            a card is drawn in the upright position, it generally ascribes the positive attributes associated
+            with the card. If, however, the card is drawn upside-down, or reversed as it is known in tarot
+            readings, that means that the opposite meanings are given. It can also mean that a challenge relating
+            to that card's meaning will be present soon, or highlight the area in life where you are struggling.
+        </p>
+    </div>
+
+    <!-- JavaScript Link -->
+    <script src="script.js"></script>
+</body>
+</html>

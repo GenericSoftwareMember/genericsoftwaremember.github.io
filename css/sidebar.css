@@ -1,0 +1,32 @@
+/*
+File: sidebar.css
+GUI Assignment: HW 1
+Name: Kevin Sree
+Date Created: 9/24/23
+Description: CSS file created to house the sidebar so it can be called upon from all pages.
+*/
+
+/* Styles the sidebar container */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+/* Styles the sidebar link */
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+
+/* Styles the sidebar tab when hovered over */
+.sidebar a:hover {
+    background-color: rgb(78, 149, 172);
+    color: white;
+}

@@ -1,0 +1,62 @@
+<!--
+File: lovers.html
+GUI Assignment: HW 1
+Name: Kevin Sree
+Date Created: 9/24/23
+Description: The page about the Lovers Arcana.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Lovers | Tarot Cards</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <base href="http://127.0.0.1:3000/">
+</head>
+<body>
+    <!-- Calls upon the sidebar from sidebar.html and properly displays it on the left side. -->
+    <div id="sidebarContainer"></div>
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebarContainer').innerHTML = data;
+            });
+    </script>
+
+    <div class="header">
+        <!--
+            Displays the lovers card.
+            Image is taken from wikipedia page:
+            https://en.wikipedia.org/wiki/The_Lovers
+        -->
+        <img src="/Images/Lovers.jpg" alt="The Lovers" class="tarotCard">
+
+        <h1>The Lovers</h1>
+        
+        <p> The Lovers is the sixth card in the Major set and true to its name, is typically comprised of
+            two people on the card. The Lovers represent love, partnership, and choices.
+        </p>
+        <br>
+
+        <h2>Upright</h2>
+        <p> When The Lovers appear upright in a reading, it signifies a significant choice related to love, 
+            relationships, or partnerships. It represents harmony and mutual attraction, suggesting a strong 
+            connection with someone or a deepening of existing bonds. This card encourages you to make 
+            choices based on your heart's desires and values. It can also indicate a time of passionate 
+            commitment and emotional fulfillment.
+        </p>
+        <br>
+
+        <h2>Reversed</h2>
+        <p> In a reversed position, The Lovers may indicate conflicts, disharmony, or challenges in relationships. 
+            You might be facing difficult decisions or experiencing conflicts of interest. This card encourages 
+            you to reevaluate your choices and prioritize communication and understanding. It may also signify a 
+            need to reconcile differences or reconsider a partnership that isn't aligned with your values. Be 
+            cautious when making important decisions, and strive for harmony in your relationships.
+        </p>
+    </div>
+</body>
+</html>

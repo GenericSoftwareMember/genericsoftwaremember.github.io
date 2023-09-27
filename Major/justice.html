@@ -1,0 +1,63 @@
+<!--
+File: justice.html
+GUI Assignment: HW 1
+Name: Kevin Sree
+Date Created: 9/24/23
+Description: The page about the Justice Arcana.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Justice | Tarot Cards</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <base href="http://127.0.0.1:3000/">
+</head>
+<body>
+    <!-- Calls upon the sidebar from sidebar.html and properly displays it on the left side. -->
+    <div id="sidebarContainer"></div>
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebarContainer').innerHTML = data;
+            });
+    </script>
+
+    <div class="header">
+        <!--
+            Displays the justice card.
+            Image is taken from wikipedia page:
+            https://en.wikipedia.org/wiki/Justice_(tarot_card)
+        -->
+        <img src="/Images/Justice.jpg" alt="The Justice" class="tarotCard">
+
+        <h1>The Justice</h1>
+        
+        <p> There can be some confusion between Justice and Strength, as the two swap numbers. For the purposes 
+            of this, the Justice shall be considered the eighth card. No matter the number, the concept of Justice 
+            does not change, embodynig fairness, balance, and moral judgment.
+        </p>
+        <br>
+
+        <h2>Upright</h2>
+        <p> When Justice appears upright in a reading, it signifies fairness, truth, and impartiality. This 
+            card represents a need for rationality and ethical decision-making. It suggests that your 
+            actions and choices should be guided by principles of justice and integrity. Justice encourages 
+            you to seek truth, make balanced decisions, and take responsibility for your actions. It 
+            can also indicate that a legal or ethical matter will be resolved in your favor.
+        </p>
+        <br>
+
+        <h2>Reversed</h2>
+        <p> In a reversed position, Justice may indicate unfairness, dishonesty, or a lack of accountability. 
+            You might be facing a situation where truth is hidden or justice is not served. This card 
+            encourages you to reevaluate your actions and decisions for any ethical lapses. It can also 
+            warn against making hasty or biased judgments. Take time to seek the truth, rectify any 
+            imbalances, and ensure your decisions align with your moral principles.
+        </p>
+    </div>
+</body>
+</html>

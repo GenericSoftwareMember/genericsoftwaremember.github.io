@@ -1,0 +1,64 @@
+<!--
+File: hanged-man.html
+GUI Assignment: HW 1
+Name: Kevin Sree
+Date Created: 9/24/23
+Description: The page about the Hanged Man Arcana.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Hanged Man | Tarot Cards</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <base href="http://127.0.0.1:3000/">
+</head>
+<body>
+    <!-- Calls upon the sidebar from sidebar.html and properly displays it on the left side. -->
+    <div id="sidebarContainer"></div>
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebarContainer').innerHTML = data;
+            });
+    </script>
+
+    <div class="header">
+        <!--
+            Displays the hanged man card.
+            Image is taken from wikipedia page:
+            https://en.wikipedia.org/wiki/The_Hanged_Man_(tarot_card)
+        -->
+        <img src="/Images/Hanged_Man.jpg" alt="The Hanged Man" class="tarotCard">
+
+        <h1>The Hanged Man</h1>
+        
+        <p> Bearing a gruesome name, the Hanged Man is the twelfth card in the Major Arcana. It embodies 
+            surrender, sacrifice, and a shift in perspective. The reason why the man is hanging is actually 
+            a reference to Norse mythology, which has the god Odin suspending himself from a tree after 
+            sacrificing his eye in order to obtain knowledge.
+        </p>
+        <br>
+
+        <h2>Upright</h2>
+        <p> When The Hanged Man appears upright in a reading, it signifies a need to let go, pause, and 
+            gain a new perspective on a situation. This card represents a willingness to surrender, 
+            release control, and view matters from a different angle. It can suggest a period of waiting 
+            or self-sacrifice for a greater purpose. The Hanged Man encourages you to embrace the wisdom 
+            of surrender and find a deeper understanding through introspection.
+        </p>
+        <br>
+
+        <h2>Reversed</h2>
+        <p> In a reversed position, The Hanged Man may indicate resistance to change, delays, or feeling 
+            stuck. You might be reluctant to let go of old beliefs or habits, hindering your progress. 
+            This card advises you to release resistance and be open to new perspectives and experiences. 
+            It can also signify impatience or a need to take action. Embrace change willingly and trust 
+            that a shift in perspective will bring clarity and growth.
+        </p>
+    </div>
+</body>
+</html>

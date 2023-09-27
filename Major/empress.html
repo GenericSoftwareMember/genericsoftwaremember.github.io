@@ -1,0 +1,61 @@
+<!--
+File: empress.html
+GUI Assignment: HW 1
+Name: Kevin Sree
+Date Created: 9/24/23
+Description: The page about the Empress Arcana.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Empress | Tarot Cards</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <base href="http://127.0.0.1:3000/">
+</head>
+<body>
+    <!-- Calls upon the sidebar from sidebar.html and properly displays it on the left side. -->
+    <div id="sidebarContainer"></div>
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebarContainer').innerHTML = data;
+            });
+    </script>
+
+    <div class="header">
+        <!--
+            Displays the empress card.
+            Image is taken from wikipedia page:
+            https://en.wikipedia.org/wiki/The_Empress_(tarot_card)
+        -->
+        <img src="/Images/Empress.jpg" alt="The Empress" class="tarotCard">
+
+        <h1>The Empress</h1>
+
+        <p> The Empress is the third of the Major Arcana, representing the concepts of fertility, nurturing, and abundance.
+            It ties heavily into the idea of motherhood, also embodying action and initiative. It also has connections to 
+            the planet Venus due to the planet having a similar connotation to femininity.
+        </p>
+        <br>
+
+        <h2>Upright</h2>
+        <p> When The Empress appears upright in a reading, it signifies a period of growth, fertility, and creativity. 
+            This card heralds abundance and prosperity, whether it's related to material wealth, family, or creative 
+            projects. It encourages you to connect with your nurturing side and bring your ideas and projects to fruition. 
+            It's a reminder to embrace and appreciate the beauty of the natural world.
+        </p>
+        <br>
+
+        <h2>Reversed</h2>
+        <p> In a reversed position, The Empress may indicate a blockage or imbalance in the areas of fertility, creativity, 
+            or abundance. You might be neglecting self-care or struggling to nurture your ideas and relationships. This card 
+            encourages you to assess where you might be stifling your creative energy and find ways to restore balance. It 
+            can also warn against overindulgence or extravagance, advising moderation and responsible nurturing.
+        </p>
+    </div>
+</body>
+</html>

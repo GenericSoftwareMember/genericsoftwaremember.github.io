@@ -1,0 +1,64 @@
+<!--
+File: world.html
+GUI Assignment: HW 1
+Name: Kevin Sree
+Date Created: 9/24/23
+Description: The page about the World Arcana.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The World | Tarot Cards</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <base href="http://127.0.0.1:3000/">
+</head>
+<body>
+    <!-- Calls upon the sidebar from sidebar.html and properly displays it on the left side. -->
+    <div id="sidebarContainer"></div>
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebarContainer').innerHTML = data;
+            });
+    </script>
+
+    <div class="header">
+        <!--
+            Displays the world card.
+            Image is taken from wikipedia page:
+            https://en.wikipedia.org/wiki/The_World_(tarot_card)
+        -->
+        <img src="/Images/World.jpg" alt="The World" class="tarotCard">
+
+        <h1>The World</h1>
+        
+        <p> Unless the Fool is considered the twenty-second, The World is the twenty-first and final card in the 
+            Major Arcana. It symbolizes completion, fulfillment, and unity. In Thoth's deck, it is instead called 
+            the Universe.
+        </p>
+        <br>
+
+        <h2>Upright</h2>
+        <p> When The World appears upright in a reading, it signifies a sense of accomplishment, fulfillment, 
+            and unity with the universe. This card represents the successful completion of a significant 
+            life cycle or goal. It encourages you to celebrate your achievements, embrace new opportunities, 
+            and recognize your place in the grand scheme of life. The World is a reminder that you are in 
+            harmony with your surroundings and that the possibilities are endless.
+        </p>
+        <br>
+
+        <h2>Reversed</h2>
+        <p> In a reversed position, The World may indicate a sense of incompleteness, stagnation, or feeling 
+            disconnected from your purpose. You might be struggling to achieve closure or find your place 
+            in the world. This card encourages you to reflect on what might be holding you back and what you 
+            need to do to move forward. It may also suggest that you are not fully embracing your potential 
+            or that you need to overcome obstacles to reach your goals. Embrace the opportunity to find closure, 
+            make necessary changes, and realign with your life's purpose.
+        </p>
+    </div>
+</body>
+</html>

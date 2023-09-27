@@ -1,0 +1,64 @@
+<!--
+File: strength.html
+GUI Assignment: HW 1
+Name: Kevin Sree
+Date Created: 9/24/23
+Description: The page about the Strength Arcana.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Strength | Tarot Cards</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <base href="http://127.0.0.1:3000/">
+</head>
+<body>
+    <!-- Calls upon the sidebar from sidebar.html and properly displays it on the left side. -->
+    <div id="sidebarContainer"></div>
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebarContainer').innerHTML = data;
+            });
+    </script>
+
+    <div class="header">
+        <!--
+            Displays the strength card.
+            Image is taken from wikipedia page:
+            https://en.wikipedia.org/wiki/Strength_(tarot_card)
+        -->
+        <img src="/Images/Strength.jpg" alt="The Strength" class="tarotCard">
+
+        <h1>The Strength</h1>
+        
+        <p> As stated before, the exact positioning of the Strength and Justice can be interchanged between 
+            decks, so their placement can be confusing. For this, the Strength shall be the eleventh card in 
+            the major Arcana, which symbolizes courage, inner strength, and compassion.
+        </p>
+        <br>
+
+        <h2>Upright</h2>
+        <p> When Strength appears upright in a reading, it signifies inner courage, resilience, and the 
+            ability to overcome challenges through inner strength. This card represents the power of 
+            patience, compassion, and self-control. It encourages you to approach difficult situations 
+            with grace and kindness, rather than force or aggression. Strength reminds you that you have 
+            the inner fortitude to face adversity and emerge victorious.
+        </p>
+        <br>
+
+        <h2>Reversed</h2>
+        <p> In a reversed position, Strength may indicate a lack of inner strength or a struggle to control 
+            impulses. You might be feeling overwhelmed by circumstances or have difficulty finding patience 
+            and compassion. This card encourages you to focus on self-discipline and building inner resilience. 
+            It can also serve as a warning against confrontations or using force to address problems. 
+            Take time to nurture your inner strength and practice patience and kindness, even in 
+            challenging moments.
+        </p>
+    </div>
+</body>
+</html>

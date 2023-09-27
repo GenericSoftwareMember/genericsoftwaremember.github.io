@@ -1,0 +1,63 @@
+<!--
+File: star.html
+GUI Assignment: HW 1
+Name: Kevin Sree
+Date Created: 9/24/23
+Description: The page about the Star Arcana.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Star | Tarot Cards</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <base href="http://127.0.0.1:3000/">
+</head>
+<body>
+    <!-- Calls upon the sidebar from sidebar.html and properly displays it on the left side. -->
+    <div id="sidebarContainer"></div>
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebarContainer').innerHTML = data;
+            });
+    </script>
+
+    <div class="header">
+        <!--
+            Displays the star card.
+            Image is taken from wikipedia page:
+            https://en.wikipedia.org/wiki/The_Star_(tarot_card)
+        -->
+        <img src="/Images/Star.jpg" alt="The Star" class="tarotCard">
+
+        <h1>The Star</h1>
+        
+        <p> The Star, the seventeenth card in the Major Arcana, symbolizes hope, inspiration, and 
+            spiritual guidance. It often features a woman kneeling beside a pool of water, pouring 
+            water from two jugs into a pond and gazing at a star-filled sky.
+        </p>
+        <br>
+
+        <h2>Upright</h2>
+        <p> When The Star appears upright in a reading, it signifies a time of inspiration, hope, and 
+            healing. This card represents a renewed sense of purpose and a connection to higher guidance. 
+            It encourages you to have faith in the future and follow your dreams. The Star suggests that 
+            even in challenging times, there is a guiding light that can lead you toward greater 
+            fulfillment and happiness. Trust in your own intuition and the universe's plan for you.
+        </p>
+        <br>
+
+        <h2>Reversed</h2>
+        <p> In a reversed position, The Star may indicate a lack of hope, doubt, or disconnection from your 
+            inner guidance. You might be feeling lost or struggling to find inspiration. This card encourages 
+            you to reconnect with your dreams and aspirations. It may also suggest that you need to address 
+            any feelings of hopelessness or negativity. Remember that even in difficult times, there is 
+            still a spark of hope and inspiration within you.
+        </p>
+    </div>
+</body>
+</html>

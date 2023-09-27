@@ -1,0 +1,64 @@
+<!--
+File: moon.html
+GUI Assignment: HW 1
+Name: Kevin Sree
+Date Created: 9/24/23
+Description: The page about the Moon Arcana.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Moon | Tarot Cards</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <base href="http://127.0.0.1:3000/">
+</head>
+<body>
+    <!-- Calls upon the sidebar from sidebar.html and properly displays it on the left side. -->
+    <div id="sidebarContainer"></div>
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebarContainer').innerHTML = data;
+            });
+    </script>
+
+    <div class="header">
+        <!--
+            Displays the moon card.
+            Image is taken from wikipedia page:
+            https://en.wikipedia.org/wiki/The_Moon_(tarot_card)
+        -->
+        <img src="/Images/Moon.jpg" alt="The Moon" class="tarotCard">
+
+        <h1>The Moon</h1>
+        
+        <p> The Moon, the eighteenth card in the Major Arcana, symbolizes intuition, illusion, and 
+            the subconscious mind. It often features a moonlit landscape with a crayfish emerging 
+            from water and two canines howling at the moon.
+        </p>
+        <br>
+
+        <h2>Upright</h2>
+        <p> When The Moon appears upright in a reading, it signifies a period of heightened intuition, 
+            emotions, and mystery. This card represents the need to trust your instincts and delve 
+            deeper into your subconscious. It can suggest hidden truths, psychic experiences, or dream 
+            exploration. The Moon encourages you to embrace the unknown and face your fears with 
+            courage, knowing that not everything is as it seems. It's a reminder to rely on your inner 
+            guidance and let go of illusions.
+        </p>
+        <br>
+
+        <h2>Reversed</h2>
+        <p> In a reversed position, The Moon may indicate confusion, deception, or a lack of clarity. 
+            You might be feeling disoriented or misled by your emotions. This card encourages you to 
+            seek clarity and avoid making hasty decisions. It may also suggest that you are not in touch
+             with your intuition or are ignoring your inner wisdom. Take time for introspection and inner 
+             reflection to uncover hidden truths and navigate through the fog of uncertainty.
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!--
+File: sun.html
+GUI Assignment: HW 1
+Name: Kevin Sree
+Date Created: 9/24/23
+Description: The page about the Sun Arcana.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Sun | Tarot Cards</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <base href="http://127.0.0.1:3000/">
+</head>
+<body>
+    <!-- Calls upon the sidebar from sidebar.html and properly displays it on the left side. -->
+    <div id="sidebarContainer"></div>
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebarContainer').innerHTML = data;
+            });
+    </script>
+
+    <div class="header">
+        <!--
+            Displays the sun card.
+            Image is taken from wikipedia page:
+            https://en.wikipedia.org/wiki/The_Sun_(tarot_card)
+        -->
+        <img src="/Images/Sun.jpg" alt="The Sun" class="tarotCard">
+
+        <h1>The Sun</h1>
+        
+        <p> The Sun, the nineteenth card in the Major Arcana, radiates joy, success, and enlightenment. 
+            It often features a bright sun shining in a clear sky, and a child riding a white horse, 
+            symbolizing pure, unbridled optimism.
+        </p>
+        <br>
+
+        <h2>Upright</h2>
+        <p> When The Sun appears upright in a reading, it signifies a period of immense joy, success, 
+            and positivity. This card represents clarity, abundance, and a sense of achievement. It 
+            encourages you to embrace the light of truth and bask in the warmth of happiness. The Sun 
+            suggests that you are in a position of power, confidence, and authenticity. It's a reminder 
+            to stay true to yourself and to share your light and warmth with others.
+        </p>
+        <br>
+
+        <h2>Reversed</h2>
+        <p> In a reversed position, The Sun may indicate a temporary blockage of joy or a struggle to see 
+            the positive side of a situation. You might be facing challenges or feeling overshadowed by 
+            negativity. This card encourages you to overcome any obstacles and remember that the sun will 
+            shine again. It may also suggest that you need to rekindle your inner light and optimism. Be 
+            patient, and soon the clouds will clear, revealing the bright and hopeful side of life.
+        </p>
+    </div>
+</body>
+</html>
